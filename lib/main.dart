@@ -1,4 +1,5 @@
 import 'package:bmi_tt9/constants.dart';
+import 'package:bmi_tt9/widget/my_fab_btn.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(BMICalculator());
@@ -14,7 +15,7 @@ class BMICalculator extends StatelessWidget {
             AppBarTheme(backgroundColor: backgroundColor, elevation: 0),
         colorScheme: Theme.of(context)
             .colorScheme
-            .copyWith(primary: Colors.red, secondary: Colors.yellow),
+            .copyWith(primary: Colors.pinkAccent, secondary: Colors.pinkAccent),
       ),
       home: InputPage(),
     );
@@ -149,22 +150,8 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            FloatingActionButton(
-                                onPressed: () {},
-                                child: Text(
-                                  "+",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
-                                )),
-                            FloatingActionButton(
-                                onPressed: () {},
-                                child: Text(
-                                  "-",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
-                                )),
+                            MyFab(onPressed: (){}, icon: Icons.add),
+                            MyFab(onPressed: (){}, icon: Icons.remove),
                           ],
                         ),
                       ],
@@ -194,22 +181,8 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            FloatingActionButton(
-                                onPressed: () {},
-                                child: Text(
-                                  "+",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
-                                )),
-                            FloatingActionButton(
-                                onPressed: () {},
-                                child: Text(
-                                  "-",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
-                                )),
+                            MyFab(onPressed: (){}, icon: Icons.add),
+                            MyFab(onPressed: (){}, icon: Icons.remove),
                           ],
                         ),
                       ],
@@ -222,7 +195,7 @@ class _InputPageState extends State<InputPage> {
               height: 80,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.red,
+                color: Colors.pinkAccent,
               ),
               child: Center(
                 child: Text(
