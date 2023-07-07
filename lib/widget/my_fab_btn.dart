@@ -1,3 +1,4 @@
+import 'package:bmi_tt9/constants.dart';
 import 'package:flutter/material.dart';
 
 class MyFab extends StatelessWidget {
@@ -17,7 +18,7 @@ class MyFab extends StatelessWidget {
       constraints: BoxConstraints(minWidth: 36, minHeight:36 ),
       padding: EdgeInsets.all(16),
       shape: CircleBorder(),
-      fillColor: Colors.pinkAccent,
+      fillColor: colorfab,
         onPressed: onPressed,
       child: Icon(icon),
     );
